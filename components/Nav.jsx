@@ -13,17 +13,17 @@ import {
 
 // nav data
 export const navData = [
-  { name: "home", path: "/", Icon: HiHome },
-  { name: "about", path: "/about", Icon: HiUser },
-  { name: "services", path: "/services", Icon: HiRectangleGroup },
-  { name: "work", path: "/work", Icon: HiViewColumns },
+  { name: "Home", path: "/", Icon: HiHome },
+  { name: "About us", path: "/about", Icon: HiUser },
+  { name: "What we do", path: "/services", Icon: HiRectangleGroup },
+  { name: "Other Applications", path: "/work", Icon: HiViewColumns },
   {
-    name: "testimonials",
+    name: "Testimonials",
     path: "/testimonials",
     Icon: HiChatBubbleBottomCenterText,
   },
   {
-    name: "contact",
+    name: "Contact us",
     path: "/contact",
     Icon: HiEnvelope,
   },
@@ -33,8 +33,8 @@ const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
-      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
+    <nav className="flex flex-col items-center justify-start gap-y-4 fixed bottom-0 lg:mt-5 mt-[5.5rem] lg:right-[2%] lg:translate-x-0 right-[50%] translate-x-[50%] z-50 top-[1rem] sm:w-[65%] w-[80%] lg:max-w-[50%] xl:max-w-[40%] h-fit">
+      <div className="flex w-full md:flex-row items-center justify-between gap-y-10 px-8 h-[40px] py-8 bg-white/10 backdrop-blur-sm text-3xl md:text-xl rounded-full">
         {navData.map((link, i) => (
           <Link
             className={`${
@@ -46,24 +46,26 @@ const Nav = () => {
             {/* tolltip */}
             <div
               role="tooltip"
-              className="absolute pr-14 right-0 hidden xl:group-hover:flex"
+              className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 hidden lg:group-hover:flex"
             >
-              <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
+              <div className="bg-white flex text-primary items-center p-[6px] rounded-[3px]">
                 <div className="text-[12px] leading-none font-semibold capitalize">
                   {link.name}
                 </div>
 
-                {/* triangle */}
+                {/* triangle (arrow pointing up) */}
                 <div
-                  className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"
-                  aria-hidden
+                  className="absolute top-3 left-1/2 transform -translate-x-1/2 -translate-y-[6px] 
+                 border-solid border-b-white border-b-8 border-l-transparent border-r-transparent"
+                  aria-hidden="true"
                 />
               </div>
             </div>
 
             {/* icon */}
-            <div>
-              <link.Icon aria-hidden />
+            <div className="flex flex-col items-center justify-center ">
+              <link.Icon aria-hidden size={22} />
+              <p className="text-[10px] hidden sm:block">{link.name}</p>
             </div>
           </Link>
         ))}

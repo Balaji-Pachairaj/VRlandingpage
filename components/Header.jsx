@@ -11,16 +11,17 @@ const Header = () => {
           {/* logo */}
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src="/companyLogo.webp"
               alt="logo"
-              width={220}
-              height={48}
+              width={150}
+              height={32}
               priority
             />
           </Link>
 
           {/* socials */}
-          <Socials />
+          {/* <Socials /> */}
+           <div></div>
         </div>
       </div>
     </header>

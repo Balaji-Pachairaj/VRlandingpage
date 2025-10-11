@@ -19,10 +19,10 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Ethan Smith | Portfolio</title>
+        <title>Trishul Medutainment</title>
         <meta
           name="description"
-          content="Ethan Smith is a Full-stack web developer with 10+ years of experience."
+          content="Trishul Medutainment Pvt Ltd is a pioneering tech-driven startup specialising in Augmented Reality (AR), Virtual Reality (VR) and Artificial Intelligence (AI). "
         />
         <meta
           name="keywords"

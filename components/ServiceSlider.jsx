@@ -12,32 +12,63 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const serviceData = [
   {
     Icon: RxCrop,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Digital Twin",
+    description:
+      "We create real-time digital replicas of physical environments.",
   },
   {
     Icon: RxPencil2,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Education",
+    description:
+      "Immersive VR experiences that transform learning into engaging, interactive exploration.",
   },
   {
     Icon: RxDesktop,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Navigation",
+    description:
+      "Advanced 3D navigation systems that guide users through complex environments seamlessly.",
   },
   {
     Icon: RxReader,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Projection Mapping",
+    description:
+      "Turning ordinary spaces into dynamic visual storytelling experiences with precise projection technology.",
   },
   {
     Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Combat Training",
+    description:
+      "Realistic VR simulations that enhance tactical awareness and combat readiness.",
+  },
+  {
+    Icon: RxRocket,
+    title: "Dome Projection",
+    description:
+      "Immersive 360° dome visuals for education, entertainment, and exhibitions.",
+  },
+  {
+    Icon: RxRocket,
+    title: "Health Care & Therapy",
+    description:
+      "Virtual environments aiding recovery, relaxation, and patient engagement.",
+  },
+  {
+    Icon: RxRocket,
+    title: "Robotic Surgery",
+    description:
+      "Enhanced precision and safety through simulation and visualization technologies.",
+  },
+  {
+    Icon: RxRocket,
+    title: "Other Applications",
+    description:
+      "Expanding VR possibilities in Sports Training, Collaborative VR, Real Estate, and VR Training.",
+    link: "/work",
   },
 ];
 
@@ -63,7 +94,12 @@ const ServiceSlider = () => {
     >
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
-          <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
+          <Link
+            href={item.link || "/"}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="bg-[rgba(65,47,123,0.15)] h-max h rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+          >
             {/* icon */}
             <div className="text-4xl text-accent mb-4">
               <item.Icon aria-hidden />
@@ -72,7 +108,6 @@ const ServiceSlider = () => {
             {/* title & description */}
             <div className="mb-8">
               <div className="mb-2 text-lg">{item.title}</div>
-              <p className="max-w-[350px] leading-normal">{item.description}</p>
             </div>
 
             {/* arrow */}
@@ -82,7 +117,7 @@ const ServiceSlider = () => {
                 aria-hidden
               />
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
