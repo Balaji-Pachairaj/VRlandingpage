@@ -4,10 +4,13 @@ import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import WorkSlider from "../../components/WorkSlider";
 import { fadeIn } from "../../variants";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 const Work = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center lg:pt-[15rem] md:pt-[35rem] pt-[17.5rem]">
+      {/* particles */}
+      <ParticlesContainer />
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-8">

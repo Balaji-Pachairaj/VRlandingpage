@@ -20,55 +20,13 @@ const serviceData = [
     title: "Digital Twin",
     description:
       "We create real-time digital replicas of physical environments.",
+    link: "/services/digitalTwin",
   },
   {
     Icon: RxPencil2,
     title: "Education",
     description:
       "Immersive VR experiences that transform learning into engaging, interactive exploration.",
-  },
-  {
-    Icon: RxDesktop,
-    title: "Navigation",
-    description:
-      "Advanced 3D navigation systems that guide users through complex environments seamlessly.",
-  },
-  {
-    Icon: RxReader,
-    title: "Projection Mapping",
-    description:
-      "Turning ordinary spaces into dynamic visual storytelling experiences with precise projection technology.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Combat Training",
-    description:
-      "Realistic VR simulations that enhance tactical awareness and combat readiness.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Dome Projection",
-    description:
-      "Immersive 360° dome visuals for education, entertainment, and exhibitions.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Health Care & Therapy",
-    description:
-      "Virtual environments aiding recovery, relaxation, and patient engagement.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Robotic Surgery",
-    description:
-      "Enhanced precision and safety through simulation and visualization technologies.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Other Applications",
-    description:
-      "Expanding VR possibilities in Sports Training, Collaborative VR, Real Estate, and VR Training.",
-    link: "/work",
   },
 ];
 
@@ -81,7 +39,7 @@ const ServiceSlider = () => {
           spaceBetween: 15,
         },
         640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 15,
         },
       }}
@@ -98,7 +56,7 @@ const ServiceSlider = () => {
             href={item.link || "/"}
             target="_blank"
             rel="noreferrer noopener"
-            className="bg-[rgba(65,47,123,0.15)] h-max h rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+            className="bg-[rgba(65,47,123,0.15)] h-full h rounded-lg px-6  py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
           >
             {/* icon */}
             <div className="text-4xl text-accent mb-4">
@@ -107,7 +65,11 @@ const ServiceSlider = () => {
 
             {/* title & description */}
             <div className="mb-8">
-              <div className="mb-2 text-lg">{item.title}</div>
+              <div className="mb-2 text-xl">{item.title}</div>
+            </div>
+
+            <div className="hidden sm:block text-sm text-white/60 mb-8">
+              {item.description}
             </div>
 
             {/* arrow */}

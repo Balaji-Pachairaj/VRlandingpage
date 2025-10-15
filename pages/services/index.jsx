@@ -4,12 +4,14 @@ import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import ServiceSlider from "../../components/ServiceSlider";
 import { fadeIn } from "../../variants";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 export const serviceData = [];
 
 const Services = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center lg:pt-[15rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[12rem]">
+      <ParticlesContainer />
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-8">

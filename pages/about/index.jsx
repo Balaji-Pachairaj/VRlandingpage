@@ -19,6 +19,7 @@ import {
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 //  data
 export const aboutData = [
@@ -78,6 +79,8 @@ const About = () => {
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left  xl:pt-[15rem] lg:pt-[8rem] pt-[12.5rem] overflow-auto">
+                      {/* particles */}
+        <ParticlesContainer />
       <Circles />
 
       {/* avatar img */}
@@ -109,7 +112,7 @@ const About = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 lg:text-md text-sm"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 lg:text-md text-sm text-white"
           >
             Led by industry veterans with 45+ years of experience, we integrate
             cutting-edge IoTs, AR/VR and AI technologies to transform real-world
@@ -127,7 +130,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={45} duration={5} />
+                  <CountUp start={0} end={45} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -135,24 +138,24 @@ const About = () => {
               </div>
 
               {/* clients */}
-              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={7} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                  Industry Work With.
                 </div>
-              </div> */}
+              </div>
 
               {/* projects */}
-              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={200} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
+                  Projects worked
                 </div>
-              </div> */}
+              </div>
 
               {/* awards */}
               {/* <div className="relative flex-1">
@@ -220,7 +223,7 @@ const About = () => {
                 </div>
                 {item.para &&
                   item.para.map((p) => (
-                    <p className="font-light mb-2 md:mb-0 m-0 text-[12px]">
+                    <p className="font-light mb-2 md:mb-0 m-0 text-[13px] text-white">
                       {p}
                     </p>
                   ))}
