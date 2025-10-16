@@ -109,7 +109,7 @@ const applicationsItems = [
 const Services = () => {
   return (
     <div className="h-full bg-primary/30  flex items-center lg:pt-[10rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[14rem]  overflow-auto overflow-x-hidden">
-      <ParticlesContainer />
+      {/* <ParticlesContainer /> */}
       <Circles />
       <div className="pb-24 md:pb-0 container mx-auto h-full flex flex-col justify-start md:gap-[1rem] gap-[0.5rem]">
         <motion.h2
