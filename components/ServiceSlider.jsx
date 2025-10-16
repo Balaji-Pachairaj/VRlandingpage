@@ -27,6 +27,7 @@ const serviceData = [
     title: "Education",
     description:
       "Immersive VR experiences that transform learning into engaging, interactive exploration.",
+    link: "/services/educationalSolution",
   },
 ];
 
@@ -54,8 +55,7 @@ const ServiceSlider = () => {
         <SwiperSlide key={i}>
           <Link
             href={item.link || "/"}
-            target="_blank"
-            rel="noreferrer noopener"
+
             className="bg-[rgba(65,47,123,0.15)] h-full h rounded-lg px-6  py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
           >
             {/* icon */}
