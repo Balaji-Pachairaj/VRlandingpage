@@ -95,8 +95,6 @@ const About = () => {
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left  xl:pt-[15rem] lg:pt-[8rem] pt-[12.5rem] overflow-auto">
-      {/* particles */}
-      <ParticlesContainer />
       <Circles />
 
       {/* avatar img */}

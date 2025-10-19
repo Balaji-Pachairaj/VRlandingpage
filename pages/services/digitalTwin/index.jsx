@@ -194,7 +194,7 @@ const Services = () => {
                     href={item.link || "/"}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="bg-[rgba(65,47,123,0.15)] h-[90%] h rounded-lg px-6  pt-8 pb-4 flex flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+                    className="bg-[rgba(65,47,123,0.15)] sm:h-[90%] h-[88%] h rounded-lg px-6  pt-8 pb-4 flex flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
                   >
                     {/* icon */}
                     <div className="text-4xl text-accent mb-4">
@@ -302,7 +302,7 @@ const Services = () => {
 
         <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 pb-24">
           {/* text */}
-          <div className="flex-1 flex flex-col justify-center gap-12">
+          <div className="w-full flex-1 flex flex-col justify-center gap-12 text-center">
             <motion.h2
               variants={fadeIn("right", 0.2)}
               initial="hidden"
@@ -319,9 +319,9 @@ const Services = () => {
               variants={fadeIn("right", 0.6)}
               initial="hidden"
               animate="show"
-              className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+              className="flex mx-auto xl:mx-0 mb-8"
             >
-              <div className="flex flex-1 xl:gap-x-6">
+              <div className=" grid sm:grid-cols-3 grid-cols-2 md:flex flex-1 xl:gap-x-6 gap-x-[3rem] gap-y-[3rem] justify-center">
                 {/* experience */}
                 <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 gag-[1rem]">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">

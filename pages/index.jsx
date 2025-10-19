@@ -30,11 +30,10 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-white lg:text-lg text-sm"
           >
-            Trishul Medutainment Pvt Ltd is a pioneering tech-driven startup
-            specialising in Augmented Reality (AR), Virtual Reality (VR) and
-            Artificial Intelligence (AI). 
+            Decoding the conundrum of Augmented Reality, Virtual Reality and
+            Artificial Intelligence.
           </motion.p>
 
           {/* btn */}
