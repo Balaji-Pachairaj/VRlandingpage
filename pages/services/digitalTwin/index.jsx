@@ -108,7 +108,7 @@ const applicationsItems = [
 ];
 const Services = () => {
   return (
-    <div className="h-full bg-primary/30  flex items-center lg:pt-[10rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[14rem]  overflow-auto overflow-x-hidden">
+    <div className=" w-full h-full bg-primary/30  flex items-center lg:pt-[10rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[14rem]  overflow-auto overflow-x-hidden">
       {/* <ParticlesContainer /> */}
       <Circles />
       <div className="pb-24 md:pb-0 container mx-auto h-full flex flex-col justify-start md:gap-[1rem] gap-[0.5rem]">
@@ -206,7 +206,7 @@ const Services = () => {
                       <div className="mb-2 text-md">{item.title}</div>
                     </div>
 
-                    <div className=" sm:block text-[12px] text-white/60 mb-8">
+                    <div className=" text-[12px] text-white/60 mb-8">
                       {item.description}
                     </div>
                   </Link>

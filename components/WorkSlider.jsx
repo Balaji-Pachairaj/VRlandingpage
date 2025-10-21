@@ -15,22 +15,22 @@ const workSlides = {
         {
           title: "Sport Training",
           path: "/sportTraining.avif",
-          link: "http://example.com",
+          link: "/work/sportTraining",
         },
         {
           title: "Collaborative VR",
           path: "/RealEstate.avif",
-          link: "http://example.com",
+          link: "/work/collaborativeVr",
         },
         {
           title: "Real Estate",
           path: "/RealEstate.avif",
-          link: "http://example.com",
+          link: "/work/realEstate",
         },
         {
           title: "VR Training",
           path: "/VRtraining.avif",
-          link: "http://example.com",
+          link: "/work/vrTraining",
         },
       ],
     },
