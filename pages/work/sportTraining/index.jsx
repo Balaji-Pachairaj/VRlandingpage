@@ -115,7 +115,7 @@ const SportTraining = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className=" md:text-md text-[12px] mb-8 xl:mb-0 text-start pb-36"
+          className=" md:text-md text-[14px] mb-8 xl:mb-0 text-start pb-36"
         >
           Athlete Performance: VR can be used for mental training, allowing
           athletes to simulate game scenarios or visualise specific plays and

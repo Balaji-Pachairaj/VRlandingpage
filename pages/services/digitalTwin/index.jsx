@@ -106,6 +106,34 @@ const applicationsItems = [
     title: "Maintenance and Support",
   },
 ];
+
+const verticlesItems = [
+  {
+    Icon: FaTools,
+    iconColor: "#9C27B0",
+    title: "Combat Training",
+  },
+  {
+    Icon: FaCogs,
+    iconColor: "#9C27B0",
+    title: "Collaborative VR",
+  },
+  {
+    Icon: FaUserGraduate,
+    iconColor: "#E91E63",
+    title: "Real Estate, architecture & Interiors",
+  },
+  {
+    Icon: FaGasPump,
+    iconColor: "#E91E63",
+    title: "Sport Training",
+  },
+  {
+    Icon: FaShieldAlt,
+    iconColor: "#E91E63",
+    title: "Robotic Surgery",
+  },
+];
 const Services = () => {
   return (
     <div className=" w-full h-full bg-primary/30  flex items-center lg:pt-[10rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[14rem]  overflow-auto overflow-x-hidden">
@@ -127,7 +155,7 @@ const Services = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className=" md:text-md text-[12px] mb-8 xl:mb-0 text-center"
+          className=" md:text-md text-[14px] mb-8 xl:mb-0 text-center"
         >
           A digital twin is a virtual representation of a physical object,
           system, or process, designed to simulate its real-world counterpart.
@@ -136,7 +164,79 @@ const Services = () => {
           simulations in a 3D environment.
         </motion.h2>
 
-        <div className="flex flex-col lg:flex-row gap-x-8 mt-[2rem]">
+        <div className=" py-12 w-full flex flex-col items-center gap-6">
+          <motion.h2
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2 lg:mt-8 lg:text-4xl text-3xl"
+          >
+            <span className=" text-secondaryAccent">Verticles</span>
+          </motion.h2>
+
+          <motion.div
+            variants={fadeIn("down", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full lg:w-[90%]"
+          >
+            <Swiper
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 15,
+                },
+                820: {
+                  slidesPerView: 4,
+                  spaceBetween: 15,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                },
+                1080: {
+                  slidesPerView: 5,
+                  spaceBetween: 15,
+                },
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[FreeMode, Pagination]}
+              freeMode
+              className="h-[200px]"
+            >
+              {verticlesItems.map((item, i) => (
+                <SwiperSlide key={i} className="flex flex-row items-center">
+                  <Link
+                    href={item.link || "/"}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="bg-[rgba(65,47,123,0.45)] w-[150px] h-[150px] rounded-[50%] h  px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 border-secondaryAccent border"
+                  >
+                    {/* icon */}
+                    <div className="text-4xl text-accent mb-4 w-full flex flex-row justify-center">
+                      <item.Icon color={item.iconColor} aria-hidden size={24} />
+                    </div>
+
+                    {/* title & description */}
+                    <div className="mb-8">
+                      <div className="mb-2 text-[12px] text-center">
+                        {item.title}
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-x-8 mt-[2rem] w-full">
           {/* text */}
           <div className="text-center flex lg:w-[30vw] flex-col lg:text-left mb-4 lg:mb-0">
             <motion.h2

@@ -12,25 +12,40 @@ const workSlides = {
   slides: [
     {
       images: [
+        // {
+        //   title: "Sport Training",
+        //   path: "/sportTraining.avif",
+        //   link: "/work/sportTraining",
+        // },
+        // {
+        //   title: "Collaborative VR",
+        //   path: "/RealEstate.avif",
+        //   link: "/work/collaborativeVr",
+        // },
+        // {
+        //   title: "Real Estate",
+        //   path: "/RealEstate.avif",
+        //   link: "/work/realEstate",
+        // },
+        // {
+        //   title: "VR Training",
+        //   path: "/VRtraining.avif",
+        //   link: "/work/vrTraining",
+        // },
         {
-          title: "Sport Training",
-          path: "/sportTraining.avif",
-          link: "/work/sportTraining",
-        },
-        {
-          title: "Collaborative VR",
-          path: "/RealEstate.avif",
-          link: "/work/collaborativeVr",
-        },
-        {
-          title: "Real Estate",
-          path: "/RealEstate.avif",
-          link: "/work/realEstate",
-        },
-        {
-          title: "VR Training",
+          title: "Digital Twin",
           path: "/VRtraining.avif",
-          link: "/work/vrTraining",
+          link: "/services/digitalTwin",
+        },
+        {
+          title: "Dome Projections",
+          path: "/RealEstate.avif",
+          link: "/work",
+        },
+        {
+          title: "Projection Mapping",
+          path: "/sportTraining.avif",
+          link: "/work",
         },
       ],
     },

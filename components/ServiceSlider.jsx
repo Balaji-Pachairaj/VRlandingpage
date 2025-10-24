@@ -17,10 +17,10 @@ import Link from "next/link";
 const serviceData = [
   {
     Icon: RxCrop,
-    title: "Digital Twin",
+    title: "Navigation",
     description:
       "We create real-time digital replicas of physical environments.",
-    link: "/services/digitalTwin",
+    link: "/services",
   },
   {
     Icon: RxPencil2,
