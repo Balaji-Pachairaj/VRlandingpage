@@ -112,11 +112,13 @@ const verticlesItems = [
     Icon: FaTools,
     iconColor: "#9C27B0",
     title: "Combat Training",
+    link: "/services/digitalTwin/combat-training",
   },
   {
     Icon: FaCogs,
     iconColor: "#9C27B0",
     title: "Collaborative VR",
+    link: "/services/digitalTwin/collaborativeVR",
   },
   {
     Icon: FaUserGraduate,
@@ -134,6 +136,7 @@ const verticlesItems = [
     title: "Robotic Surgery",
   },
 ];
+
 const Services = () => {
   return (
     <div className=" w-full h-full bg-primary/30  flex items-center lg:pt-[10rem] md:pt-[16.5rem] sm:pt-[17rem] pt-[14rem]  overflow-auto overflow-x-hidden">
@@ -214,9 +217,7 @@ const Services = () => {
                 <SwiperSlide key={i} className="flex flex-row items-center">
                   <Link
                     href={item.link || "/"}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="bg-[rgba(65,47,123,0.45)] w-[150px] h-[150px] rounded-[50%] h  px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 border-secondaryAccent border"
+                    className="bg-[rgba(65,47,123,0.45)] w-[150px] h-[150px] rounded-[50%] hover:bg-accent hover:bg-opacity-40 px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer  transition-all duration-300 border-secondaryAccent border"
                   >
                     {/* icon */}
                     <div className="text-4xl text-accent mb-4 w-full flex flex-row justify-center">
@@ -292,7 +293,6 @@ const Services = () => {
                 <SwiperSlide key={i}>
                   <Link
                     href={item.link || "/"}
-                    target="_blank"
                     rel="noreferrer noopener"
                     className="bg-[rgba(65,47,123,0.15)] sm:h-[90%] h-[88%] h rounded-lg px-6  pt-8 pb-4 flex flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
                   >
