@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 import React from "react";
 import { fadeIn } from "../variants";
 
-const BubbleContent = ({ title = "Applications", contentItems = [] }) => {
+const BubbleContent = ({
+  title = "Applications",
+  description = null,
+  contentItems = [],
+  size = 175,
+}) => {
   return (
     <div className=" mx-auto py-6 w-full flex flex-col items-center gap-6">
       {title && (
@@ -15,6 +20,18 @@ const BubbleContent = ({ title = "Applications", contentItems = [] }) => {
         >
           <span className=" text-accent">{title}</span>
         </motion.h2>
+      )}
+
+      {description && (
+        <motion.p
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="mb-4  lg:text-[14px] text-[12px] text-center"
+        >
+          {description}
+        </motion.p>
       )}
 
       {/* slider */}
@@ -57,7 +74,7 @@ const BubbleContent = ({ title = "Applications", contentItems = [] }) => {
                   i % 3 === 0 ? "bg-[#0A3457] border-secondaryAccent" : ""
                 } ${i % 3 === 1 ? "bg-[#371366] border-[#4B1C5B]" : ""}  ${
                   i % 3 === 2 ? "bg-[#6F0F5B] border-[#570F3F]" : ""
-                }  w-[175px] h-[175px] rounded-[50%] h  px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 border-[5px] `}
+                }  w-[${size}px] h-[${size}px] rounded-[50%] h  px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 border-[5px] `}
               >
                 {/* title & description */}
                 <div className="">
