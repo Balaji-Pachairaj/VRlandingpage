@@ -80,9 +80,6 @@ const advantagesOfVrTraining = {
     {
       title: "Zero logistical constraints",
     },
-    {
-      title: "All in real time",
-    },
   ],
 };
 

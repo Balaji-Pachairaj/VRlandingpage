@@ -124,16 +124,19 @@ const verticlesItems = [
     Icon: FaUserGraduate,
     iconColor: "#E91E63",
     title: "Real Estate, architecture & Interiors",
+    link: "/services/digitalTwin/realEstate",
   },
   {
     Icon: FaGasPump,
     iconColor: "#E91E63",
     title: "Sport Training",
+    link: "/services/digitalTwin/sport-training",
   },
   {
     Icon: FaShieldAlt,
     iconColor: "#E91E63",
     title: "Robotic Surgery",
+    link: "/services/digitalTwin/health-care",
   },
 ];
 

@@ -337,12 +337,6 @@ const coreObjectives = {
   ],
 };
 
-// Extended Infrastructure
-// Authorised patrol vessels will be fitted with antennae:
-// 1.	Detect vessels in vicinity
-// 2.	Real-time Augmented Plotting of boats & vessels
-// 3.	Relay information to central system
-
 const extendedInfrastructure = {
   title: "Extended Infrastructure",
   description: "Authorised patrol vessels will be fitted with antennae",
@@ -419,7 +413,7 @@ const Services = () => {
           description={systemEnhancementPossibilities.description}
           contentItems={systemEnhancementPossibilities.stepsItems}
         />
-        
+
         <BubbleContent
           title={extendedInfrastructure.title}
           description={extendedInfrastructure.description}
