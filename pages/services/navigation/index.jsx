@@ -34,7 +34,10 @@ import CountUp from "react-countup";
 import StepComponent from "../../../components/StepComponent";
 import BubbleContent from "../../../components/BubbleContent";
 import TitleAndSubComponent from "../../../components/titleAndSubTextComponent";
-
+import { GiFishingPole } from "react-icons/gi";
+import { FaSailboat } from "react-icons/fa6";
+import { TiWarning } from "react-icons/ti";
+import { FaChartLine } from "react-icons/fa";
 const serviceData = [
   {
     Icon: BsHeadsetVr,
@@ -154,20 +157,24 @@ const maritimeChallenge = {
       title:
         "Your nation thrives on a strong fishing culture and maritime commerce activities",
       description: "",
+      icon :GiFishingPole
     },
     {
       title:
         "Smaller vessels and fishing boats often lack automatic tracking systems",
       description: "",
+      icon :FaSailboat
     },
     {
       title: "Many such vessels go missing without a trace",
       description: "",
+      icon : TiWarning
     },
     {
       title:
         "Growing number of boats poses a challenge for Coast Guard, Navy and Marine Police ",
       description: "",
+      icon : FaChartLine
     },
   ],
 };
@@ -208,7 +215,7 @@ const howItWorks = {
 };
 
 const systemEnhancementPossibilities = {
-  title: "System Enhancement Possibilities ",
+  title: "System Enhancement",
   description:
     "Ocean Link capabilities can be expanded in collaboration with government departments",
   stepsItems: [
@@ -383,18 +390,19 @@ const Services = () => {
         <StepComponent
           title={maritimeChallenge.title}
           itemsData={maritimeChallenge.stepsItems}
-          height={"h-[180px] sm:h-[240px]"}
+          height={"h-[160px] sm:h-[200px]"}
         />
         <StepComponent
           title={howItWorks.title}
           description={howItWorks.description}
           itemsData={howItWorks.stepsItems}
+          height={"h-[170px] sm:h-[220px]"}
         />
 
         <TitleAndSubComponent
           title={ourSolutionOceanLink.title}
           itemsData={ourSolutionOceanLink.stepsItems}
-          height={"h-[160px] sm:h-[220px]"}
+          height={"h-[140px] sm:h-[200px]"}
         />
 
         <TitleAndSubComponent
@@ -406,6 +414,7 @@ const Services = () => {
         <StepComponent
           title={coreObjectives.title}
           itemsData={coreObjectives.stepsItems}
+                   height={"h-[170px] sm:h-[220px]"}
         />
 
         <BubbleContent

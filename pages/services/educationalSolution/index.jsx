@@ -26,29 +26,6 @@ import { HiMiniPuzzlePiece } from "react-icons/hi2";
 
 //  data
 export const aboutData = [
-//   {
-//     title: "Why Us",
-//     info: [
-//       {
-//         para: [
-//           "Trishul Medutainment Pvt Ltd stands out as a pioneer in AR, VR and AI driven solutions, seamlessly blending digital and physical realities to revolutionise industries. With a leadership team boasting of 45+years of expertise, we deliver cutting-edge, customised solutions across healthcare, education, tourism, navigation, security and defence.",
-//           "Our commitment to innovation, precision and user-centric design ensures immersive, high-impact experiences. We leverage our capabilities of digital twinning, Innovation and Advanced IoT development, powered by AI-technology. These key ingredients help build robust, scalable, cost-efficient, future-ready solutions across various industries and sectors, which is aimed at Enhanced Training, Operations and Engagement.",
-//           "Choosing us means, partnering with a tech-driven company dedicated to transforming industries and unlocking limitless possibilities for the future. ",
-//         ],
-//       },
-//     ],
-//   },
-
-//   {
-//     title: "Our Mission",
-//     info: [
-//       {
-//         para: [
-//           "To develop cutting-edge immersive and AI-driven solutions across healthcare, education, navigation, security, defense, tourism and other industrial sectors, hence empowering organisation.",
-//         ],
-//       },
-//     ],
-//   },
   {
     title: "Immerge Lab is",
     info: [
@@ -76,14 +53,28 @@ export const aboutData = [
       },
     ],
   },
-    {
+  {
     title: "About ImmergeLab",
     info: [
       {
         para: [
           "From the study of atoms to the human body to botanical  and zoological dissections to exploring the cosmos & ocean life to taking 360° tours of historical spots and events! All while being able to interact with 3-D virtual objects.",
-          "ImmergeLab Provides complete system solutions: Hardware ——> Software ——> Content ——> Services",
-          "VR has headsets with intuitive handheld controllers that allow interactivity to explore and learn, for a brilliant immersive experience. The VR headsets are stand alone IoTs, allowing for seamless movement and endless freedom! Troubleshooting services can be provided, if required, for uninterrupted and unparalleled adventure.",
+          "All while being able to interact with 3-D virtual objects.",
+        ],
+      },
+      {
+        paraTitle: "ImmergeLab Provides complete system solutions:",
+        para: ["Hardware ——> Software ——> Content ——> Services"],
+      },
+      {
+        para: [
+          "VR has headsets with intuitive handheld controllers that allow interactivity to explore and learn, for a brilliant immersive experience. ",
+          "The VR headsets are standalone IoTs, allowing for seamless movement and endless freedom",
+        ],
+      },
+      {
+        para: [
+          "Troubleshooting services can be provided, if required, for uninterrupted and unparalleled adventure.",
         ],
       },
     ],
@@ -161,47 +152,7 @@ const About = () => {
             animate="show"
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
-            <div className="flex flex-1 xl:gap-x-6">
-              {/* experience */}
-              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={45} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
-                </div>
-              </div> */}
-
-              {/* clients */}
-              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={7} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Industry Work With.
-                </div>
-              </div> */}
-
-              {/* projects */}
-              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={200} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Projects worked
-                </div>
-              </div> */}
-
-              {/* awards */}
-              {/* <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
-                </div>
-              </div> */}
-            </div>
+            <div className="flex flex-1 xl:gap-x-6"></div>
           </motion.div>
         </div>
 
@@ -242,14 +193,23 @@ const About = () => {
                         <Icon color={item.iconsColor[iconI]} />
                       </div>
                     ))}
+                    {item.icons && <div className="hidden md:flex">-</div>}
                   </div>
 
                   {/* title */}
                   {item.title && (
                     <>
-                      <div className="hidden md:flex">-</div>
                       <div className="font-light mb-2 md:mb-0 text-white">
                         {item.title}
+                      </div>
+                    </>
+                  )}
+
+                  {/* paraTitle */}
+                  {item.paraTitle && (
+                    <>
+                      <div className="font-bold mb-2 md:mb-0 text-accent">
+                        {item.paraTitle}
                       </div>
                     </>
                   )}

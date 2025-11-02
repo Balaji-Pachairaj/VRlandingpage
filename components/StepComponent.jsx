@@ -16,6 +16,7 @@ const StepComponent = ({
     },
   ],
   height = "h-[240px] sm:h-[340px]",
+  stepIndex = null,
 }) => {
   return (
     <div className=" w-full flex flex-col gap-x-8 mt-[2rem]">
@@ -83,11 +84,17 @@ const StepComponent = ({
                 rel="noreferrer noopener"
                 className="bg-[rgba(65,47,123,0.15)]  sm:h-[90%] h-[88%] h rounded-lg px-6  pt-8 pb-4 flex flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
               >
-                {/* icon */}
-                <div className="text-4xl text-white mb-4">
-                  {i + 1}
-                  {")"}
-                </div>
+                {stepIndex && (
+                  <div className="text-4xl text-white mb-4">
+                    {i + 1}
+                    {")"}
+                  </div>
+                )}
+                {item.icon && (
+                  <div className="text-4xl text-white mb-4">
+                    <item.icon />
+                  </div>
+                )}
 
                 {/* title & description */}
                 <div className="mb-8">

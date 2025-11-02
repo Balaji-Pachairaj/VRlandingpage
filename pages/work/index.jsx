@@ -21,7 +21,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 lg:mt-12 lg:text-4xl text-3xl"
+              className="h2 lg:mt-[10rem] lg:text-4xl text-3xl"
             >
               Other Applications <span className="text-accent">.</span>
             </motion.h2>
@@ -46,7 +46,7 @@ const Work = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full lg:max-w-[65%]"
+            className="w-full lg:max-w-[65%] lg:mt-[10rem]"
           >
             <WorkSlider />
           </motion.div>

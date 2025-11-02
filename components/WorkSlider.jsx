@@ -38,14 +38,9 @@ const workSlides = {
           link: "/services/digitalTwin",
         },
         {
-          title: "Dome Projections",
+          title: "Projection Mapping & Dome Projection",
           path: "/RealEstate.avif",
           link: "/work/dome-projection",
-        },
-        {
-          title: "Projection Mapping",
-          path: "/sportTraining.avif",
-          link: "/work/projection-mapping",
         },
       ],
     },

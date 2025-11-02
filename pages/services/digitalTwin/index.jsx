@@ -4,12 +4,17 @@ import Bulb from "../../../components/Bulb";
 import Circles from "../../../components/Circles";
 import ServiceSlider from "../../../components/ServiceSlider";
 import { fadeIn } from "../../../variants";
-import { GiTwoCoins } from "react-icons/gi";
+import { GiPistolGun, GiTwoCoins } from "react-icons/gi";
 import ParticlesContainer from "../../../components/ParticlesContainer";
 import { GiWarlockEye } from "react-icons/gi";
 import { PiMonitorPlayFill } from "react-icons/pi";
 import Link from "next/link";
-import { FaPeopleGroup } from "react-icons/fa6";
+import {
+  FaBuilding,
+  FaPeopleArrows,
+  FaPeopleGroup,
+  FaRobot,
+} from "react-icons/fa6";
 import {
   FaIndustry,
   FaTools,
@@ -19,6 +24,7 @@ import {
   FaShieldAlt,
   FaGasPump,
   FaCogs,
+  FaRunning,
 } from "react-icons/fa";
 import { BsGrid, BsHeadsetVr } from "react-icons/bs";
 import { FreeMode, Pagination } from "swiper";
@@ -109,31 +115,31 @@ const applicationsItems = [
 
 const verticlesItems = [
   {
-    Icon: FaTools,
+    Icon: GiPistolGun,
     iconColor: "#9C27B0",
     title: "Combat Training",
     link: "/services/digitalTwin/combat-training",
   },
   {
-    Icon: FaCogs,
+    Icon: FaPeopleArrows,
     iconColor: "#9C27B0",
     title: "Collaborative VR",
     link: "/services/digitalTwin/collaborativeVR",
   },
   {
-    Icon: FaUserGraduate,
+    Icon: FaBuilding,
     iconColor: "#E91E63",
-    title: "Real Estate, architecture & Interiors",
+    title: "Real Estate, Architecture & Interiors",
     link: "/services/digitalTwin/realEstate",
   },
   {
-    Icon: FaGasPump,
+    Icon: FaRunning,
     iconColor: "#E91E63",
     title: "Sport Training",
     link: "/services/digitalTwin/sport-training",
   },
   {
-    Icon: FaShieldAlt,
+    Icon: FaRobot,
     iconColor: "#E91E63",
     title: "Robotic Surgery",
     link: "/services/digitalTwin/health-care",
@@ -178,7 +184,7 @@ const Services = () => {
             exit="hidden"
             className="h2 lg:mt-8 lg:text-4xl text-3xl"
           >
-            <span className=" text-secondaryAccent">Verticles</span>
+            <span className=" text-secondaryAccent">Verticals</span>
           </motion.h2>
 
           <motion.div
@@ -426,7 +432,7 @@ const Services = () => {
             >
               <div className=" grid sm:grid-cols-3 grid-cols-2 md:flex flex-1 xl:gap-x-6 gap-x-[3rem] gap-y-[3rem] justify-center">
                 {/* experience */}
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 gag-[1rem]">
+                <div className="relative flex-1 flex flex-col items-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 gag-[1rem]">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">
                     <GiWarlockEye size={48} color={"#2C3F9E"} />
                   </div>
@@ -436,7 +442,7 @@ const Services = () => {
                 </div>
 
                 {/* clients */}
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="relative flex-1 flex flex-col items-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">
                     <FaPeopleGroup size={48} color="#6A3E91" />
                   </div>
@@ -446,7 +452,7 @@ const Services = () => {
                 </div>
 
                 {/* projects */}
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="relative flex-1 flex flex-col items-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">
                     <PiMonitorPlayFill size={48} color="#C52D8D" />
                   </div>
@@ -455,16 +461,16 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="relative flex-1 flex flex-col items-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">
                     <GiTwoCoins size={48} color="#6A3E91" />
                   </div>
-                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[150px]">
                     Cost-Efficient Testing
                   </div>
                 </div>
 
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="relative flex-1 flex flex-col items-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-4xl font-extrabold text-secondaryAccent mb-2">
                     <GiSewingMachine size={48} color="#6A3E91" />
                   </div>

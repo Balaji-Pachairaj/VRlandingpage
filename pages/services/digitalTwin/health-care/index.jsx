@@ -204,12 +204,7 @@ const Index = () => {
                     rel="noreferrer noopener"
                     className="bg-[rgba(65,47,123,0.15)] max-w-[300px]  jus sm:h-[90%] h-[88%] h rounded-lg px-6  pt-8 pb-4 flex flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
                   >
-                    {/* icon */}
-                    <div className="md:text-4xl text-3xl text-white mb-4">
-                      {i + 1}
-                      {")"}
-                    </div>
-
+                
                     {/* title & description */}
                     <div className="mb-8">
                       <div className="mb-2 md:text-[14px] text-[12px]">

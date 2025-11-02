@@ -70,11 +70,7 @@ const BubbleContent = ({
                 href={item.link || "/"}
                 target="_blank"
                 rel="noreferrer noopener"
-                className={`  ${
-                  i % 3 === 0 ? "bg-[#0A3457] border-secondaryAccent" : ""
-                } ${i % 3 === 1 ? "bg-[#371366] border-[#4B1C5B]" : ""}  ${
-                  i % 3 === 2 ? "bg-[#6F0F5B] border-[#570F3F]" : ""
-                }  w-[175px] h-[175px] rounded-[50%] h  px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 border-[5px] `}
+                className={`bg-[rgba(65,47,123,0.45)] w-[175px] h-[175px] rounded-[50%] hover:bg-accent hover:bg-opacity-40 px-6  pt-8 pb-4 flex flex-col items-center justify-center group cursor-pointer  transition-all duration-300 border-secondaryAccent border`}
               >
                 {/* title & description */}
                 <div className="">
