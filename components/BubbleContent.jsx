@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 import { fadeIn } from "../variants";
-
+import { FreeMode, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 const BubbleContent = ({
   title = null,
   description = null,
@@ -40,32 +44,38 @@ const BubbleContent = ({
         initial="hidden"
         animate="show"
         exit="hidden"
-        className={`w-full lg:w-[90%] grid ${
-          contentItems.length >= 5
-            ? "xl:grid-cols-5"
-            : `xl:grid-cols-${contentItems?.length}`
-        } ${
-          contentItems.length >= 4
-            ? "lg:grid-cols-4"
-            : `lg:grid-cols-${contentItems?.length}`
-        }  ${
-          contentItems.length >= 3
-            ? "md:grid-cols-3"
-            : `md:grid-cols-${contentItems?.length}`
-        }  ${
-          contentItems.length >= 2
-            ? "grid-cols-2"
-            : `grid-cols-${contentItems?.length}`
-        }    justify-center  gap-8 mb-12`}
+        className="w-full lg:w-[90%]"
       >
-        {contentItems.map((item, i) => (
-          <div className=" w-full h-full flex flex-row justify-center items-center">
-            <div
-              key={i}
-              className={`flex flex-row items-center h-[200px] ${
-                i % 2 === 0 ? "mt-0" : "mt-8"
-              }`}
-            >
+        <Swiper
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            820: {
+              slidesPerView: 4,
+              spaceBetween: 15,
+              centeredSlides: true,
+              centeredSlidesBounds: true,
+            },
+            1080: {
+              slidesPerView: 5,
+              spaceBetween: 15,
+            },
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+          freeMode
+          className="h-[240px] "
+        >
+          {contentItems.map((item, i) => (
+            <SwiperSlide key={i} className="flex flex-row items-center">
               <div
                 href={item.link || "/"}
                 target="_blank"
@@ -79,9 +89,9 @@ const BubbleContent = ({
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        ))}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </motion.div>
     </div>
   );
